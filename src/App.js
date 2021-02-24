@@ -6,14 +6,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      msg: "Hello word!"
+      msg: "Hello word!",
+      backgroundColor: "blue",
+      color: "gray",
+      count: 0
     }
 
   }
 
   handleClick = () => {
     this.setState({
-      msg: "Hi!, i am Ojhal"
+      msg: "Hi!, i am Ojhal",
+      backgroundColor: "red",
+      color: "green",
+      count: this.state.count + 1
     })
     console.log('clicked', this)
   }
@@ -21,9 +27,15 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Message</h1>
-        <p style={{ color: "red" }}>{this.state.msg}</p>
-        <button onClick={this.handleClick}>click  me</button>
+
+        <h1>Message{this.state.count}</h1>
+        <p style={{ color: this.state.color }}>{this.state.msg}</p>
+        <input
+          name="name"
+          text="text"
+          placeholder="Enter name"
+        />
+        <button style={{ backgroundColor: this.state.backgroundColor }} onClick={this.handleClick}>click  me</button>
       </div>
     );
   }
