@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
+import puma from './puma.png';
 import { render } from "react-dom";
 
 class App extends Component {
@@ -21,13 +22,13 @@ class App extends Component {
       color: "green",
       count: this.state.count + 1
     })
-    console.log('clicked', this)
+    console.log('clicked')
   }
 
   render() {
     return (
       <div className="container">
-
+        <img src={puma} className="App-logo" alt="logo" />
         <h1>Message{this.state.count}</h1>
         <p style={{ color: this.state.color }}>{this.state.msg}</p>
         <input
