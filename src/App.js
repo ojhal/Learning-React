@@ -10,12 +10,22 @@ class App extends Component {
     }
 
   }
+
+  handleClick = () => {
+    this.setState({
+      msg: "Hi!, i am Ojhal"
+    })
+    console.log('clicked', this)
+  }
+
   render() {
     return (
-      <div>
-        <h3 style={{ color: "red" }}>{this.state.msg}</h3>
+      <div className="container">
+        <h1>Message</h1>
+        <p style={{ color: "red" }}>{this.state.msg}</p>
+        <button onClick={this.handleClick}>click  me</button>
       </div>
-    )
+    );
   }
 
 }
