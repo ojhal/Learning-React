@@ -10,9 +10,16 @@ class App extends Component {
       msg: "Hello word!",
       backgroundColor: "blue",
       color: "gray",
-      count: 0
+      count: 0,
+      color: ""
     }
 
+  }
+  handleChange = (e) => {
+    this.setState({
+      color: "blue"
+    })
+    console.log('changed')
   }
 
   handleClick = () => {
@@ -30,11 +37,12 @@ class App extends Component {
       <div className="container">
         <img src={puma} className="App-logo" alt="logo" />
         <h1>Message{this.state.count}</h1>
-        <p style={{ color: this.state.color }}>{this.state.msg}</p>
+        <p style={{ color: this.state.color }}>{this.state.msg}{this.handleChange}</p>
         <input
           name="name"
           text="text"
           placeholder="Enter name"
+          onChange={this.handleChange}
         />
         <button style={{ backgroundColor: this.state.backgroundColor }} onClick={this.handleClick}>click  me</button>
       </div>
