@@ -10,3 +10,20 @@ button {
 .container {
   text-align: center;
 }
+
+.click {
+  cursor: pointer;
+}
+
+.click:hover {
+  opacity: 1;
+  transform: scale(2);
+  transition-duration: 0.5s;
+}
+
+.image {
+  width: 25%;
+  height: auto;
+  text-align: center;
+
+}
