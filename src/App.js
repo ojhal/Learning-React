@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
 import puma from './puma.png';
-import { render } from "react-dom";
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class App extends Component {
   }
   handleChange = (e) => {
     this.setState({
-      color: "blue"
+      color: e.target.value
     })
     console.log('changed')
   }
@@ -45,7 +44,9 @@ class App extends Component {
           placeholder="Enter name"
           onChange={this.handleChange}
         />
+
         <button className="click" style={{ backgroundColor: this.state.backgroundColor }} onClick={this.handleClick}>click  me</button>
+
       </div>
     );
   }
