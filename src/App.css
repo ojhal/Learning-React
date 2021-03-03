@@ -27,3 +27,8 @@ button {
   text-align: center;
 
 }
+
+ul.a {
+  list-style-type: square;
+  text-align: center;
+}
