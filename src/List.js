@@ -18,9 +18,10 @@ class List extends Component {
 
   usersArray() {
     return (
+
       <ul className='a'>
         {this.props.userContent.map(content => (
-          <li>{content}</li>
+          <li key={content}>{content}</li>
         ))}
       </ul>
     )

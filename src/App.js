@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import List from './List.js';
+import File from './File.js'
 import './App.css';
 import puma from './puma.png';
 
@@ -47,6 +48,7 @@ class App extends Component {
         />
         <button className="click" style={{ backgroundColor: this.state.backgroundColor }} onClick={this.handleClick}>click  me</button>
         <List />
+        <File />
 
       </div>
     );
