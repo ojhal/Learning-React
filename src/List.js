@@ -47,6 +47,10 @@ class List extends Component {
     return (
       <div>
         <h2>Message :</h2>
+
+        < button onClick={this.handleClick} >
+          Click here to know contents!
+        </button >
         <h3>{this.state.msg}</h3>
 
 
@@ -67,9 +71,9 @@ class List extends Component {
         </ul> */}
 
 
-        < button onClick={this.handleClick} >
+        {/* < button onClick={this.handleClick} >
           Click here to know contents!
-        </button >
+        </button > */}
       </div >
     );
   }
