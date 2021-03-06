@@ -5,6 +5,7 @@ export default class Form extends Component {
     return (
       <div className='container1'>
         <h3 className='form'>Application For Travel Document Fee</h3>
+        <p>Provide the following information as it appears on your Green Card.</p>
         <p className='a'> First Name:</p>
         <input
           name="name"

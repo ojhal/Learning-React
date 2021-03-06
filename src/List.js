@@ -2,37 +2,38 @@ import React, { Component } from 'react';
 // import './App.css';
 
 class List extends Component {
-  static defaultProps = {
-    userContent: ['React state', 'React Js', 'React Router']
-  }
+  // static defaultProps = {
+  //   userContent: ['React state', 'React Js', 'React Router']
+  // }
 
   constructor(props) {
     super(props);
     this.state = {
       msg: 'React Course',
-      content: ''
+      content: ['React state',
+        'React Js']
     }
 
-    this.handleClick = this.handleClick.bind(this)
+    // this.handleClick = this.handleClick.bind(this)
   }
 
-  usersArray() {
-    return (
+  // usersArray() {
+  //   return (
 
-      <ul className='a'>
-        {this.props.userContent.map(content => (
-          <li key={content}>{content}</li>
-        ))}
-      </ul>
-    )
+  //     <ul className='a'>
+  //       {this.props.userContent.map(content => (
+  //         <li key={content}>{content}</li>
+  //       ))}
+  //     </ul>
+  //   )
 
-  }
+  // }
 
 
-  handleClick() {
+  handleClick = () => {
     this.setState({
       msg: 'Course Content :',
-      content: this.usersArray()
+      content: ['ojhal', 'patwa']
 
     })
     console.log('clicked')
@@ -55,7 +56,7 @@ class List extends Component {
 
 
 
-        <p>{this.state.content}</p>
+        <p><li>{this.state.content}</li></p>
 
 
         {/* <ul className='a'>
