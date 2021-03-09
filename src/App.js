@@ -47,7 +47,8 @@ class App extends Component {
           onChange={this.handleChange}
         />
         <button className="click" style={{ backgroundColor: this.state.backgroundColor }} onClick={this.handleClick}>click  me</button>
-        <List />
+        <List item="Rahul" />
+
         <Form />
 
       </div>

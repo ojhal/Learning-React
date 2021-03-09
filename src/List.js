@@ -27,6 +27,7 @@ class List extends Component {
     const contentItem = content.map((contents) =>
       <li>{contents}</li>
     );
+
     // const arr = [10, 20, 30, 40];
     // const newArr = arr.map(num => {
     //   return <li>{num * 2}</li>
@@ -35,9 +36,10 @@ class List extends Component {
     // console.log('newArray =', newArr)
     return (
 
+
       <div>
 
-        <h2>Message :</h2>
+        <h2>Message: {this.props.item}</h2>
 
         < button onClick={this.handleClick} >
           Click here to know contents!
