@@ -25,7 +25,7 @@ class List extends Component {
   render() {
     const content = ['React js', 'React Router', 'React Native', 'React Jsx']
     const contentItem = content.map((contents) =>
-      <li>{contents}</li>
+      <li>{contents}{this.props.name}</li>
     );
 
     // const arr = [10, 20, 30, 40];
@@ -39,7 +39,8 @@ class List extends Component {
 
       <div>
 
-        <h2>Message: {this.props.item}</h2>
+        <h2>Message:{this.props.name}</h2>
+
 
         < button onClick={this.handleClick} >
           Click here to know contents!
