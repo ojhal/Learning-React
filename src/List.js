@@ -23,8 +23,8 @@ class List extends Component {
 
   }
   render() {
-    const content = ['React js', 'React Router', 'React Native', 'React Jsx']
-    const contentItem = content.map((contents) =>
+
+    const contentItem = this.props.list.map((contents) =>
       <li>{contents}{this.props.name}</li>
     );
 

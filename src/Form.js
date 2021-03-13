@@ -19,7 +19,7 @@ export default class Form extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     alert("You are submitting " + this.state.value);
-    console.log(e.target.elements.username.value)
+    console.log(e.target.value)
 
   }
 
@@ -48,6 +48,7 @@ export default class Form extends Component {
           name="name"
           text="text"
           placeholder="Last Name"
+          onChange={this.handleChange}
         />
 
         <p>Application No:</p>
@@ -55,6 +56,7 @@ export default class Form extends Component {
           name="name"
           text="text"
           placeholder="Enter App No"
+          onChange={this.handleChange}
         />
 
         <p>Date Of Birth:</p>
@@ -62,6 +64,7 @@ export default class Form extends Component {
           name="name"
           text="text"
           placeholder="DD/MM/YYYY"
+          onChange={this.handleChange}
         />
 
         {/* <input type="submit" value="submit" /> */}
@@ -76,26 +79,4 @@ export default class Form extends Component {
   }
 }
 
-//   handleSubmit = (event) => {
-//     event.preventDefault()
-//     console.log(event.target[0].value)
-//     // console.log(event.target.elements.username.value)
-//     // console.log(event.target.username.value)
-//     // console.log(this.inputNode.value)
-//   }
-//   render() {
-//     return (
-//       <form onSubmit={this.handleSubmit}>
-//         <label>
-//           Name:
-//         <input
-//             type="text"
-//             name="username"
-//           // ref={node => (this.inputNode = node)}
-//           />
-//         </label>
-//         <button type="submit">Submit</button>
-//       </form>
-//     )
-//   }
-// }
+

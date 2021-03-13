@@ -34,6 +34,7 @@ class App extends Component {
   }
 
   render() {
+    const content = ['React js', 'React Router', 'React Native', 'React Jsx', 'ojhal']
     return (
       <div className="container">
         <img src={puma} className="image" alt="logo" />
@@ -47,7 +48,7 @@ class App extends Component {
           onChange={this.handleChange}
         />
         <button className="click" style={{ backgroundColor: this.state.backgroundColor }} onClick={this.handleClick}>click  me</button>
-        <List name="ojhal" />
+        <List list={content} />
 
         <Form />
 
