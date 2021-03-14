@@ -18,7 +18,7 @@ export default class Form extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    alert("You are submitting " + this.state.value);
+    // alert("You are submitting " + this.state.value);
     console.log(e.target.value)
 
   }
@@ -26,11 +26,15 @@ export default class Form extends Component {
 
   handleClick = (e) => {
 
+
+
     console.log('clicked')
   }
   render() {
+
+
     return (
-      <form onSubmit={this.handleSubmit}>
+      <div onSubmit={this.handleSubmit}>
         <h3 className='form'>Application For Travel Document Fee</h3>
         <p>Provide the following information as it appears on your Green Card.</p>
 
@@ -41,7 +45,10 @@ export default class Form extends Component {
           text="text"
           placeholder="First Name"
           onChange={this.handleChange}
+
         />
+
+
 
         <p>Last Name:</p>
         <input
@@ -74,7 +81,7 @@ export default class Form extends Component {
 
 
 
-      </form>
+      </div>
     )
   }
 }

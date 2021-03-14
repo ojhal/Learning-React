@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import List from './List.js';
+import CheckBox from './CheckBox';
 import Form from './Form.js'
 import './App.css';
 import puma from './puma.png';
@@ -51,6 +52,8 @@ class App extends Component {
         <List list={content} />
 
         <Form />
+        <CheckBox />
+
 
       </div>
     );
