@@ -8,18 +8,18 @@ export default class Form extends Component {
     }
   }
   handleChange = (e) => {
-    const key = e.target.name;
-    const val = e.target.value;
-    this.setState({
-      [key]: val
-    });
-    console.log(e.target.value)
+    // const key = e.target.name;
+    // const val = e.target.value;
+    // this.setState({
+    //   [key]: val
+    // });
+    console.log(e)
   }
 
 
   handleSubmit = (e) => {
     // alert(this.state.value)
-    console.log(e)
+    console.log(this.state)
     e.preventDefault()
     // alert("You are submitting " + this.state.value);
 
@@ -37,7 +37,6 @@ export default class Form extends Component {
     return (
       <div >
         <form onSubmit={this.handleSubmit}>
-
           <h3 className='form'>Application For Travel Document Fee</h3>
           <p>Provide the following information as it appears on your Green Card.</p>
 
