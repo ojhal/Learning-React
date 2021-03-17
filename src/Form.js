@@ -4,7 +4,7 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+
     }
   }
   handleChange = (e) => {
@@ -13,23 +13,23 @@ export default class Form extends Component {
     // this.setState({
     //   [key]: val
     // });
-    console.log(e)
+
+    console.log(e.target.name)
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
 
   handleSubmit = (e) => {
     // alert(this.state.value)
-    console.log(this.state)
+    console.log(e.target)
     e.preventDefault()
     // alert("You are submitting " + this.state.value);
 
 
   }
 
-
-  handleClick = (e) => {
-    console.log('clicked')
-  }
 
 
 
@@ -43,7 +43,7 @@ export default class Form extends Component {
 
           <p className='a'> First Name:</p>
           <input
-            name="name"
+            name="username"
             text="text"
             placeholder="First Name"
             onChange={this.handleChange}
@@ -61,7 +61,7 @@ export default class Form extends Component {
 
           <p>Application No:</p>
           <input
-            name="name"
+            name="number"
             text="text"
             placeholder="Enter App No"
             onChange={this.handleChange}
@@ -69,16 +69,21 @@ export default class Form extends Component {
 
           <p>Date Of Birth:</p>
           <input
-            name="name"
+            name="date"
             text="text"
             placeholder="DD/MM/YYYY"
             onChange={this.handleChange}
           />
 
-          {/* <input type="submit" value="submit" /> */}
-          <br />
 
-          <button className='btn' type="submit" onClick={this.handleClick}>Submit</button>
+          <br />
+          <p>{this.state.username}</p>
+          <p>{this.state.number}</p>
+
+          <input type="submit"></input>
+
+
+          {/* <button className='btn' type="submit" onClick={this.handleClick}>Submit</button> */}
 
 
         </form>
