@@ -78,7 +78,9 @@ export default class Form extends Component {
 
           <br />
           <p>{this.state.username}</p>
+          <p>{this.state.name}</p>
           <p>{this.state.number}</p>
+          <p>{this.state.date}</p>
 
           <input type="submit"></input>
 
