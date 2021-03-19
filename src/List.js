@@ -42,7 +42,7 @@ class List extends Component {
         <h2>Message:{this.props.name}</h2>
 
 
-        < button className="btn btn-success" onClick={this.handleClick} >
+        < button className="btn btn-success" onClick={this.handleClick}>
           Click here to know contents!
           </button >
         <h3>{this.state.msg}</h3>
