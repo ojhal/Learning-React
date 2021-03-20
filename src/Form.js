@@ -4,6 +4,7 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      show: true
 
     }
   }
@@ -20,8 +21,15 @@ export default class Form extends Component {
     })
   }
 
+  handleClick = () => {
+    this.setState({
+      show: !this.state.show
+    })
+  }
+
 
   handleSubmit = (e) => {
+
     // alert(this.state.value)
     console.log(e.target)
     e.preventDefault()
@@ -82,10 +90,10 @@ export default class Form extends Component {
           <p>{this.state.number}</p>
           <p>{this.state.date}</p>
 
-          <input type="submit"></input>
+          {/* <input type="submit"></input> */}
 
 
-          {/* <button className='btn' type="submit" onClick={this.handleClick}>Submit</button> */}
+          <button className='btn' type="submit" onClick={this.handleClick}>Submit</button>
 
 
         </form>
