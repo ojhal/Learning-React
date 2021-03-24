@@ -4,6 +4,7 @@ import CheckBox from './CheckBox';
 import Form from './Form.js'
 import './App.css';
 import puma from './puma.png';
+import Card from './Card.js';
 
 class App extends Component {
   constructor(props) {
@@ -53,6 +54,8 @@ class App extends Component {
 
         <Form />
         <CheckBox />
+        <Card />
+
 
 
       </div>
@@ -64,3 +67,5 @@ class App extends Component {
 
 
 export default App;
+
+

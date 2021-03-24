@@ -4,7 +4,7 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: true
+      // show: true
 
     }
   }
@@ -23,7 +23,7 @@ export default class Form extends Component {
 
   handleClick = () => {
     this.setState({
-      show: !this.state.show
+      // show: !this.state.show
     })
   }
 
@@ -94,7 +94,7 @@ export default class Form extends Component {
 
 
           <button className='btn' type="submit" onClick={this.handleClick}>Submit</button>
-
+          {/* {this.state.show ?  :  */}
 
         </form>
       </div>
